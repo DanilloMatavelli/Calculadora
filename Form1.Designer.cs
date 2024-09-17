@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressCarregamento = new System.Windows.Forms.ProgressBar();
+            this.timerCarregamento = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,12 +59,19 @@
             this.label1.Text = "Carregando...";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // progressBar1
+            // progressCarregamento
             // 
-            this.progressBar1.Location = new System.Drawing.Point(128, 321);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(528, 23);
-            this.progressBar1.TabIndex = 2;
+            this.progressCarregamento.Location = new System.Drawing.Point(128, 321);
+            this.progressCarregamento.Name = "progressCarregamento";
+            this.progressCarregamento.Size = new System.Drawing.Size(528, 23);
+            this.progressCarregamento.TabIndex = 2;
+            this.progressCarregamento.Value = 10;
+            this.progressCarregamento.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
+            // timerCarregamento
+            // 
+            this.timerCarregamento.Enabled = true;
+            this.timerCarregamento.Tick += new System.EventHandler(this.timerCarregamento_Tick);
             // 
             // Form1
             // 
@@ -70,7 +79,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.progressCarregamento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
@@ -89,7 +98,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressCarregamento;
+        private System.Windows.Forms.Timer timerCarregamento;
     }
 }
 
