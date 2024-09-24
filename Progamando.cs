@@ -16,5 +16,11 @@ namespace Calculadora
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button; // Captura o botão que foi clicado
+            txtResultado.Text += btn.Text; // Adiciona o texto do botão ao TextBox
+        }
     }
 }
