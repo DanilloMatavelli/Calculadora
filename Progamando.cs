@@ -130,5 +130,16 @@ namespace Calculadora
         {
             lblResultado.Text = "";
         }
+
+        private void celsiusParaFahrenheitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConvertendoCelcius newFrom = new ConvertendoCelcius();  
+            newFrom.Show(); 
+        }
+
+        private void Progamando_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -40,11 +40,17 @@ namespace Calculadora
                 timerCarregamento.Stop();
                 Progamando newForm = new Progamando();
                 newForm.Show();
+                this.Hide();
             }
 
 
 
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
