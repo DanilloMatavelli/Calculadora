@@ -297,6 +297,7 @@
             this.polegadasParaCentimetrosToolStripMenuItem.Name = "polegadasParaCentimetrosToolStripMenuItem";
             this.polegadasParaCentimetrosToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.polegadasParaCentimetrosToolStripMenuItem.Text = "Polegadas para Centimetros";
+            this.polegadasParaCentimetrosToolStripMenuItem.Click += new System.EventHandler(this.polegadasParaCentimetrosToolStripMenuItem_Click);
             // 
             // Progamando
             // 

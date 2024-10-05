@@ -141,5 +141,11 @@ namespace Calculadora
         {
             Application.Exit();
         }
+
+        private void polegadasParaCentimetrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConvertendoCentimetros newFrom = new FrmConvertendoCentimetros();
+            newFrom.Show();
+        }
     }
 }
